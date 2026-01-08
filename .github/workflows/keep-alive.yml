@@ -10,5 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Ping Render app
-        run: |
-          curl -X GET https://docbot-ai-chat.onrender.com/
+        uses: fjogeleit/http-request-action@v1
+        with:
+          url: "https://docbot-ai-chat.onrender.com/"
+          method: "GET"
